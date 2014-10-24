@@ -1,0 +1,21 @@
+{
+  "name": "github-angular-module-scaffold",
+  "version": "0.0.1",
+  "homepage": "https://github.com/srfrnk/github-angular-module-scaffold",
+  "authors": [
+    "srfrnk <srfrnk@gmail.com>"
+  ],
+  "description": "Skeleton repo for all angular modules",
+  "main": "github-angular-module-scaffold.js",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "github-angular-module-scaffold",
+    "version": "0.0.1",
+    "devDependencies": {
+        "karma": "*",
+        "karma-jasmine": "*",
+        "karma-phantomjs-launcher": "*",
+        "angular": "*",
+        "angular-mocks": "*",
+        "karma-nested-reporter": "*"
+    },
+    "scripts": {
+        "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+    },
+    "description": "Skeleton repo for all angular modules",
+    "main": "github-angular-module-scaffold.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/srfrnk/github-angular-module-scaffold.git"
+    },
+    "keywords": [
+        "angularjs"
+    ],
+    "author": "srfrnk",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/srfrnk/github-angular-module-scaffold/issues"
+    },
+    "homepage": "https://github.com/srfrnk/github-angular-module-scaffold"
+}
