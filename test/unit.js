@@ -14,17 +14,15 @@ describe("ng-module", function () {
             });
             inject(services);
         };
-        this.loadElement = function (templatePath) {
+
+        function loadElement(templatePath) {
             return angular.element(this.$templateCache.get(templatePath));
         };
 
         this.loadElement = function (templatePath) {
-            var elm = angular.element(this.$templateCache.get(templatePath));
-            $j("body").append(elm);
-            return elm;
-        };
-        this.compile = function() {
-            this.$compile($j(document))(this.scope);
+            this.element=angular.element("<div></div>");
+            this.element.append(angular.element(this.$templateCache.get(templatePath)));
+            this.$compile(this.element)(this.scope);
             this.scope.$digest();
         };
 
@@ -41,9 +39,8 @@ describe("ng-module", function () {
     });
 
     it("directive should load", function () {
-        this.loadElement("test/directive.html");
         this.scope.someThing='something i need in the scope';
-        this.compile();
-        expect($j("div.directive-put-this").length).toBe(1);
+        this.loadElement("test/directive.html");
+        expect(this.element.find("div.directive-put-this").length).toBe(1);
     });
 });
