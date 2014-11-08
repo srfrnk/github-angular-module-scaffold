@@ -4,13 +4,14 @@ module.exports = function (config) {
         basePath: '',
 
         // testing framework to use (jasmine/mocha/qunit/...)
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine-jquery','jasmine'],
 
         // list of files / patterns to load in the browser
         files: [
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
             '*.js',
+            'test/**/*.html',
             'test/**/*.js'
         ],
 
@@ -36,15 +37,18 @@ module.exports = function (config) {
         // - PhantomJS
         // - IE (only Windows)
         browsers: ['PhantomJS'],
-
-
+        preprocessors: {
+            'test/**/*.html': 'ng-html2js'
+        },
         // Continuous Integration mode
         // if true, it capture browsers, run tests and exit
         singleRun: false,
         plugins: [
             'karma-jasmine',
+            'karma-jasmine-jquery',
             'karma-nested-reporter',
-            'karma-phantomjs-launcher'
+            'karma-phantomjs-launcher',
+            'karma-ng-html2js-preprocessor'
         ],
         reporters: ['nested'],
         nestedReporter: {

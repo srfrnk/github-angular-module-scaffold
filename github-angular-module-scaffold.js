@@ -23,6 +23,7 @@
 //		    	}],
 //              require: 'ngModel',
                 link: function (scope, elm, attrs/*, ngModel*/) {
+                    elm.addClass("directive-put-this");
                 }
             };
         }])

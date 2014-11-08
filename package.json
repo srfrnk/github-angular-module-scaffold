@@ -5,9 +5,11 @@
         "karma": "*",
         "karma-jasmine": "*",
         "karma-phantomjs-launcher": "*",
+        "karma-ng-html2js-preprocessor": "*",
         "angular": "*",
         "angular-mocks": "*",
-        "karma-nested-reporter": "*"
+        "karma-nested-reporter": "*",
+        "karma-jasmine-jquery":"*"
     },
     "scripts": {
         "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
